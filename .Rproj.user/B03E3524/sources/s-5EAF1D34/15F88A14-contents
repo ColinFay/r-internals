@@ -1,6 +1,0 @@
-book_filename: "r-internals"
-language:
-  ui:
-    chapter_name: "Chapter "
-
-output_dir: "docs"
