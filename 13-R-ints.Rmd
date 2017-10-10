@@ -1,0 +1,14 @@
+#  Use of TeX dialects
+<p>Various dialects of TeX are used for different purposes in R. The policy is that manuals be written in ‘texinfo’, and for convenience the main and Windows FAQs are also. This has the advantage that is is easy to produce HTML and plain text versions as well as typeset manuals.</p>
+<p>LaTeX is not used directly, but rather as an intermediate format for typeset help documents and for vignettes.</p>
+<p>Care needs to be taken about the assumptions made about the R user’s system: it may not have either ‘texinfo’ or a TeX system installed. We have attempted to abstract out the cross-platform differences, and almost all the setting of typeset documents is done by <code class="calibre2">tools::texi2dvi</code>. This is used for offline printing of help documents, preparing vignettes and for package manuals via <code class="calibre2">R CMD Rd2pdf</code>. It is not currently used for the R manuals created in directory doc/manual.</p>
+<p><code class="calibre2">tools::texi2dvi</code> makes use of a system command <code class="calibre2">texi2dvi</code> where available. On a Unix-alike this is usually part of ‘texinfo’, whereas on Windows if it exists at all it would be an executable, part of MiKTeX. If none is available, the R code runs a sequence of <code class="calibre2">(pdf)latex</code>, <code class="calibre2">bibtex</code> and <code class="calibre2">makeindex</code> commands.</p>
+<p>This process has been rather vulnerable to the versions of the external software used: particular issues have been <code class="calibre2">texi2dvi</code> and texinfo.tex updates, mismatches between the two<a href="concept-index.html#FOOT26" id="DOCF26"><sup>26</sup></a>, versions of the LaTeX package ‘hyperref’ and quirks in index production. The licenses used for LaTeX and latterly ‘texinfo’ prohibit us from including ‘known good’ versions in the R distribution.</p>
+<p>On a Unix-alike <code class="calibre2">configure</code> looks for the executables for TeX and friends and if found records the absolute paths in the system Renviron file. This used to record ‘false’ if no command was found, but it nowadays records the name for looking up on the path at run time. The latter can be important for binary distributions: one does not want to be tied to, for example, TeX Live 2007.</p>
+<hr />
+<p><a href="" id="Current-and-future-directions"></a> <a href="" id="Current-and-future-directions-1"></a></p>
+<div id="calibre_pb_25" class="calibre6">
+
+</div>
+
+

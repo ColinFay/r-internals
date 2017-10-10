@@ -1,0 +1,10 @@
+#  Testing R code
+<p>When you (as R developer) add new functions to the R base (all the packages distributed with R), be careful to check if make test-Specific or particularly, cd tests; make no-segfault.Rout still works (without interactive user intervention, and on a standalone computer). If the new function, for example, accesses the Internet, or requires GUI interaction, please add its name to the “stop list” in tests/no-segfault.Rin.</p>
+<p>[To be revised: use <code class="calibre2">make check-devel</code>, check the write barrier if you change internal structures.]</p>
+<hr />
+<p><a href="" id="Use-of-TeX-dialects"></a> <a href="" id="Use-of-TeX-dialects-1"></a></p>
+<div id="calibre_pb_23" class="calibre6">
+
+</div>
+
+

@@ -1,0 +1,9 @@
+--- 
+title: "The R language definition"
+author: "R Development Core Team"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+github-repo: ColinFay/r-internals
+link-citations: yes
+description: "R Internals: a guide to the internal structures of R and coding standards for the core team working on R itself."
+---

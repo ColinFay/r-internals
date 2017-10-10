@@ -1,0 +1,52 @@
+#  Internationalization in the R sources
+<p>The process of marking messages (errors, warnings etc) for translation in an R package is described in ‘Writing R Extensions’, and the standard packages included with R have (with an exception in <strong>grDevices</strong> for the menus of the <code class="calibre2">windows()</code> device) been internationalized in the same way as other packages.</p>
+<hr />
+<p><a href="" id="R-code"></a> <a href="" id="R-code-1"></a></p>
+<h3 id="r-code" class="section">3.1 R code</h3>
+<p>Internationalization for R code is done in exactly the same way as for extension packages. As all standard packages which have R code also have a namespace, it is never necessary to specify <code class="calibre2">domain</code>, but for efficiency calls to <code class="calibre2">message</code>, <code class="calibre2">warning</code> and <code class="calibre2">stop</code> should include <code class="calibre2">domain = NA</code> when the message is constructed <em>via</em> <code class="calibre2">gettextf</code>, <code class="calibre2">gettext</code> or <code class="calibre2">ngettext</code>.</p>
+<p>For each package, the extracted messages and translation sources are stored under package directory po in the source package, and compiled translations under inst/po for installation to package directory po in the installed package. This also applies to C code in packages.</p>
+<hr />
+<p><a href="" id="Main-C-code"></a> <a href="" id="Main-C-code-1"></a></p>
+<h3 id="main-c-code" class="section">3.2 Main C code</h3>
+<p>The main C code (e.g. that in files src/*/*.c and in the modules) is where R is closest to the sort of application for which ‘gettext’ was written. Messages in the main C code are in domain <code class="calibre2">R</code> and stored in the top-level directory po with compiled translations under share/locale.</p>
+<p>The list of files covered by the R domain is specified in file po/POTFILES.in.</p>
+<p>The normal way to mark messages for translation is via <code class="calibre2">_(&quot;msg&quot;)</code> just as for packages. However, sometimes one needs to mark passages for translation without wanting them translated at the time, for example when declaring string constants. This is the purpose of the <code class="calibre2">N_</code> macro, for example</p>
+<div class="example">
+<pre class="example1"><code>{ ERROR_ARGTYPE,           N_(&quot;invalid argument type&quot;)},</code></pre>
+</div>
+<p>from file src/main/errors.c.</p>
+<p>The <code class="calibre2">P_</code> macro</p>
+<div class="example">
+<pre class="example1"><code>#ifdef ENABLE_NLS
+#define P_(StringS, StringP, N) ngettext (StringS, StringP, N)
+#else
+#define P_(StringS, StringP, N) (N &gt; 1 ? StringP: StringS)
+#endif</code></pre>
+</div>
+<p>may be used as a wrapper for <code class="calibre2">ngettext</code>: however in some cases the preferred approach has been to conditionalize (on <code class="calibre2">ENABLE_NLS</code>) code using <code class="calibre2">ngettext</code>.</p>
+<p>The macro <code class="calibre2">_(&quot;msg&quot;)</code> can safely be used in directory src/appl; the header for standalone ‘nmath’ skips possible translation. (This does not apply to <code class="calibre2">N_</code> or <code class="calibre2">P_</code>).</p>
+<hr />
+<p><a href="" id="Windows_002dGUI_002dspecific-code"></a> <a href="" id="Windows_002dGUI_002dspecific-code-1"></a></p>
+<h3 id="windows-gui-specific-code" class="section">3.3 Windows-GUI-specific code</h3>
+<p>Messages for the Windows GUI are in a separate domain ‘RGui’. This was done for two reasons:</p>
+<ul>
+<li>The translators for the Windows version of R might be separate from those for the rest of R (familiarity with the GUI helps), and</li>
+<li>Messages for Windows are most naturally handled in the native charset for the language, and in the case of CJK languages the charset is Windows-specific. (It transpires that as the <code class="calibre2">iconv</code> we ported works well under Windows, this is less important than anticipated.)</li>
+</ul>
+<p>Messages for the ‘RGui’ domain are marked by <code class="calibre2">G_(&quot;msg&quot;)</code>, a macro that is defined in header file src/gnuwin32/win-nls.h. The list of files that are considered is hardcoded in the <code class="calibre2">RGui.pot-update</code> target of file po/Makefile.in.in: note that this includes devWindows.c as the menus on the <code class="calibre2">windows</code> device are considered to be part of the GUI. (There is also <code class="calibre2">GN_(&quot;msg&quot;)</code>, the analogue of <code class="calibre2">N_(&quot;msg&quot;)</code>.)</p>
+<p>The template and message catalogs for the ‘RGui’ domain are in the top-level po directory.</p>
+<hr />
+<p><a href="" id="macOS-GUI"></a> <a href="" id="macOS-GUI-1"></a></p>
+<h3 id="macos-gui" class="section">3.4 macOS GUI</h3>
+<p>This is handled separately: see <a href="https://developer.r-project.org/Translations30.html" class="uri">https://developer.r-project.org/Translations30.html</a>.</p>
+<hr />
+<p><a href="" id="Updating"></a> <a href="" id="Updating-1"></a></p>
+<h3 id="updating" class="section">3.5 Updating</h3>
+<p>See file po/README for how to update the message templates and catalogs.</p>
+<hr />
+<p><a href="" id="Package-Structure"></a> <a href="" id="Structure-of-an-Installed-Package"></a></p>
+<div id="calibre_pb_9" class="calibre6">
+
+</div>
+
+
