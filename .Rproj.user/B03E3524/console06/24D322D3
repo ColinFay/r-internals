@@ -1,3 +1,126 @@
 ]0;/home/colin/R/r-internals]0;colin@colin-MacBookPro: ~/R/r-internals[01;32mcolin@colin-MacBookPro[00m:[01;34m~/R/r-internals[00m$ [K]0;colin@colin-MacBookPro: ~/R/r-internals[01;32mcolin@colin-MacBookPro[00m:[01;34m~/R/r-internals[00m$ git init
 Dépôt Git vide initialisé dans /home/colin/R/r-internals/.git/
 ]0;/home/colin/R/r-internals]0;colin@colin-MacBookPro: ~/R/r-internals[01;32mcolin@colin-MacBookPro[00m:[01;34m~/R/r-internals[00m$ git add -A
+]0;/home/colin/R/r-internals]0;colin@colin-MacBookPro: ~/R/r-internals[01;32mcolin@colin-MacBookPro[00m:[01;34m~/R/r-internals[00m$ git commit - [Km "first commit"
+[master (commit racine) 56fa842] first commit
+ 94 files changed, 13847 insertions(+)
+ create mode 100644 .Rproj.user/B03E3524/console06/24D322D3
+ create mode 100644 .Rproj.user/B03E3524/console06/24D322D3.env
+ create mode 100644 .Rproj.user/B03E3524/console06/INDEX001
+ create mode 100644 .Rproj.user/B03E3524/sources/prop/157F1C8C
+ create mode 100644 .Rproj.user/B03E3524/sources/prop/3134501
+ create mode 100644 .Rproj.user/B03E3524/sources/prop/6937958
+ create mode 100644 .Rproj.user/B03E3524/sources/prop/748800F3
+ create mode 100644 .Rproj.user/B03E3524/sources/prop/964A2542
+ create mode 100644 .Rproj.user/B03E3524/sources/prop/9E13F4C2
+ create mode 100644 .Rproj.user/B03E3524/sources/prop/A0FD76E2
+ create mode 100644 .Rproj.user/B03E3524/sources/prop/D9C7030D
+ create mode 100644 .Rproj.user/B03E3524/sources/prop/DDE2346
+ create mode 100644 .Rproj.user/B03E3524/sources/prop/EBDA7350
+ create mode 100644 .Rproj.user/B03E3524/sources/prop/INDEX
+ create mode 100644 .Rproj.user/B03E3524/sources/s-5EAF1D34/15F88A14-contents
+ create mode 100644 .Rproj.user/B03E3524/sources/s-5EAF1D34/1BE9BF8E-contents
+ create mode 100644 .Rproj.user/B03E3524/sources/s-5EAF1D34/2B7B600D
+ create mode 100644 .Rproj.user/B03E3524/sources/s-5EAF1D34/2B7B600D-contents
+ create mode 100644 .Rproj.user/B03E3524/sources/s-5EAF1D34/5310BA8B
+ create mode 100644 .Rproj.user/B03E3524/sources/s-5EAF1D34/5310BA8B-contents
+ create mode 100644 .Rproj.user/B03E3524/sources/s-5EAF1D34/55266E1E
+ create mode 100644 .Rproj.user/B03E3524/sources/s-5EAF1D34/55266E1E-contents
+ create mode 100644 .Rproj.user/B03E3524/sources/s-5EAF1D34/B614AC79-contents
+ create mode 100644 .Rproj.user/B03E3524/sources/s-5EAF1D34/BE61442B-contents
+ create mode 100644 .Rproj.user/B03E3524/sources/s-5EAF1D34/CC9D18F8-contents
+ create mode 100644 .Rproj.user/B03E3524/sources/s-5EAF1D34/E2149B2E
+ create mode 100644 .Rproj.user/B03E3524/sources/s-5EAF1D34/E2149B2E-contents
+ create mode 100644 .Rproj.user/B03E3524/sources/s-5EAF1D34/F3C4B787-contents
+ create mode 100644 .Rproj.user/B03E3524/sources/s-5EAF1D34/F41CD8B6-contents
+ create mode 100644 .Rproj.user/B03E3524/sources/s-5EAF1D34/lock_file
+ create mode 100644 .Rproj.user/shared/notebooks/CE798757-index/1/s/chunks.json
+ create mode 100644 .Rproj.user/shared/notebooks/patch-chunk-names
+ create mode 100644 .Rproj.user/shared/notebooks/paths
+ create mode 100644 03-R-ints.Rmd
+ create mode 100644 04-R-ints.Rmd
+ create mode 100644 05-R-ints.Rmd
+ create mode 100644 06-R-ints.Rmd
+ create mode 100644 07-R-ints.Rmd
+ create mode 100644 08-R-ints.Rmd
+ create mode 100644 09-R-ints.Rmd
+ create mode 100644 10-R-ints.Rmd
+ create mode 100644 11-R-ints.Rmd
+ create mode 100644 12-R-ints.Rmd
+ create mode 100644 13-R-ints.Rmd
+ create mode 100644 14-R-ints.Rmd
+ create mode 100644 15-R-ints.Rmd
+ create mode 100644 16-R-ints.Rmd
+ create mode 100644 META-INF/container.xml
+ create mode 100644 README.md
+ create mode 100644 _bookdown.yml
+ create mode 100644 _output.yml
+ create mode 100644 book.bib
+ create mode 100644 content.opf
+ create mode 100644 cover_image.jpg
+ create mode 100644 docs/concept-index.html
+ create mode 100644 docs/current-and-future-directions.html
+ create mode 100644 docs/files.html
+ create mode 100644 docs/function-and-variable-index.html
+ create mode 100644 docs/graphics.html
+ create mode 100644 docs/gui-consoles.html
+ create mode 100644 docs/index.html
+ create mode 100644 docs/internal-vs-primitive.html
+ create mode 100644 docs/internationalization-in-the-r-sources.html
+ create mode 100644 docs/libs/gitbook-2.6.7/css/fontawesome/fontawesome-webfont.ttf
+ create mode 100644 docs/libs/gitbook-2.6.7/css/plugin-bookdown.css
+ create mode 100644 docs/libs/gitbook-2.6.7/css/plugin-fontsettings.css
+ create mode 100644 docs/libs/gitbook-2.6.7/css/plugin-highlight.css
+ create mode 100644 docs/libs/gitbook-2.6.7/css/plugin-search.css
+ create mode 100644 docs/libs/gitbook-2.6.7/css/style.css
+ create mode 100644 docs/libs/gitbook-2.6.7/js/app.min.js
+ create mode 100644 docs/libs/gitbook-2.6.7/js/jquery.highlight.js
+ create mode 100644 docs/libs/gitbook-2.6.7/js/lunr.js
+ create mode 100644 docs/libs/gitbook-2.6.7/js/plugin-bookdown.js
+ create mode 100644 docs/libs/gitbook-2.6.7/js/plugin-fontsettings.js
+ create mode 100644 docs/libs/gitbook-2.6.7/js/plugin-search.js
+ create mode 100644 docs/libs/gitbook-2.6.7/js/plugin-sharing.js
+ create mode 100644 docs/libs/jquery-2.2.3/jquery.min.js
+ create mode 100644 docs/r-coding-standards.html
+ create mode 100644 docs/r-internal-structures.html
+ create mode 100644 docs/search_index.json
+ create mode 100644 docs/structure-of-an-installed-package.html
+ create mode 100644 docs/style.css
+ create mode 100644 docs/testing-r-code.html
+ create mode 100644 docs/tools.html
+ create mode 100644 docs/use-of-tex-dialects.html
+ create mode 100644 ga
+ create mode 100644 index.Rmd
+ create mode 100644 mimetype
+ create mode 100644 page_styles.css
+ create mode 100644 preamble.tex
+ create mode 100644 prep-data.R
+ create mode 100644 r-internals.Rproj
+ create mode 100644 r-ints.epub
+ create mode 100644 style.css
+]0;/home/colin/R/r-internals]0;colin@colin-MacBookPro: ~/R/r-internals[01;32mcolin@colin-MacBookPro[00m:[01;34m~/R/r-internals[00m$ git remote add origin https://github.com/ColinFay/r-internals.git
+]0;/home/colin/R/r-internals]0;colin@colin-MacBookPro: ~/R/r-internals[01;32mcolin@colin-MacBookPro[00m:[01;34m~/R/r-internals[00m$ git push -u origin master
+error: cannot run rpostback-askpass: Aucun fichier ou dossier de ce type
+Username for 'https://github.com': ColinFay
+error: cannot run rpostback-askpass: Aucun fichier ou dossier de ce type
+Password for 'https://ColinFay@github.com': 
+Décompte des objets: 103, fait.
+Delta compression using up to 4 threads.
+Compression des objets:   1% (1/93)   Compression des objets:   2% (2/93)   Compression des objets:   3% (3/93)   Compression des objets:   4% (4/93)   Compression des objets:   5% (5/93)   Compression des objets:   6% (6/93)   Compression des objets:   7% (7/93)   Compression des objets:   8% (8/93)   Compression des objets:   9% (9/93)   Compression des objets:  10% (10/93)   Compression des objets:  11% (11/93)   Compression des objets:  12% (12/93)   Compression des objets:  13% (13/93)   Compression des objets:  15% (14/93)   Compression des objets:  16% (15/93)   Compression des objets:  17% (16/93)   Compression des objets:  18% (17/93)   Compression des objets:  19% (18/93)   Compression des objets:  20% (19/93)   Compression des objets:  21% (20/93)   Compression des objets:  22% (21/93)   Compression des objets:  23% (22/93)   Compression des objets:  24% (23/93)   Compression des objets:  25% (24/93)   Compression des objets:  26% (25/93)   Compression des objets:  27% (26/93)   Compression des objets:  29% (27/93)   Compression des objets:  30% (28/93)   Compression des objets:  31% (29/93)   Compression des objets:  32% (30/93)   Compression des objets:  33% (31/93)   Compression des objets:  34% (32/93)   Compression des objets:  35% (33/93)   Compression des objets:  36% (34/93)   Compression des objets:  37% (35/93)   Compression des objets:  38% (36/93)   Compression des objets:  39% (37/93)   Compression des objets:  40% (38/93)   Compression des objets:  41% (39/93)   Compression des objets:  43% (40/93)   Compression des objets:  44% (41/93)   Compression des objets:  45% (42/93)   Compression des objets:  46% (43/93)   Compression des objets:  47% (44/93)   Compression des objets:  48% (45/93)   Compression des objets:  49% (46/93)   Compression des objets:  50% (47/93)   Compression des objets:  51% (48/93)   Compression des objets:  52% (49/93)   Compression des objets:  53% (50/93)   Compression des objets:  54% (51/93)   Compression des objets:  55% (52/93)   Compression des objets:  56% (53/93)   Compression des objets:  58% (54/93)   Compression des objets:  59% (55/93)   Compression des objets:  60% (56/93)   Compression des objets:  61% (57/93)   Compression des objets:  62% (58/93)   Compression des objets:  63% (59/93)   Compression des objets:  64% (60/93)   Compression des objets:  65% (61/93)   Compression des objets:  66% (62/93)   Compression des objets:  67% (63/93)   Compression des objets:  68% (64/93)   Compression des objets:  69% (65/93)   Compression des objets:  70% (66/93)   Compression des objets:  72% (67/93)   Compression des objets:  73% (68/93)   Compression des objets:  74% (69/93)   Compression des objets:  75% (70/93)   Compression des objets:  76% (71/93)   Compression des objets:  77% (72/93)   Compression des objets:  78% (73/93)   Compression des objets:  79% (74/93)   Compression des objets:  80% (75/93)   Compression des objets:  81% (76/93)   Compression des objets:  82% (77/93)   Compression des objets:  83% (78/93)   Compression des objets:  84% (79/93)   Compression des objets:  86% (80/93)   Compression des objets:  87% (81/93)   Compression des objets:  88% (82/93)   Compression des objets:  89% (83/93)   Compression des objets:  90% (84/93)   Compression des objets:  91% (85/93)   Compression des objets:  92% (86/93)   Compression des objets:  93% (87/93)   Compression des objets:  94% (88/93)   Compression des objets:  95% (89/93)   Compression des objets:  96% (90/93)   Compression des objets:  97% (91/93)   Compression des objets:  98% (92/93)   Compression des objets: 100% (93/93)   Compression des objets: 100% (93/93), fait.
+Écriture des objets:   0% (1/103)   Écriture des objets:   1% (2/103)   Écriture des objets:   2% (3/103)   Écriture des objets:   3% (4/103)   Écriture des objets:   4% (5/103)   Écriture des objets:   5% (6/103)   Écriture des objets:   6% (7/103)   Écriture des objets:   7% (8/103)   Écriture des objets:   8% (9/103)   Écriture des objets:   9% (10/103)   Écriture des objets:  10% (11/103)   Écriture des objets:  11% (12/103)   Écriture des objets:  12% (13/103)   Écriture des objets:  13% (14/103)   Écriture des objets:  14% (15/103)   Écriture des objets:  15% (16/103)   Écriture des objets:  16% (17/103)   Écriture des objets:  17% (18/103)   Écriture des objets:  18% (19/103)   Écriture des objets:  19% (20/103)   Écriture des objets:  21% (22/103)   Écriture des objets:  22% (23/103)   Écriture des objets:  23% (24/103)   Écriture des objets:  25% (26/103)   Écriture des objets:  26% (27/103)   Écriture des objets:  27% (28/103)   Écriture des objets:  28% (29/103)   Écriture des objets:  29% (30/103)   Écriture des objets:  30% (31/103)   Écriture des objets:  31% (32/103)   Écriture des objets:  32% (33/103)   Écriture des objets:  33% (34/103)   Écriture des objets:  34% (36/103)   Écriture des objets:  35% (37/103)   Écriture des objets:  36% (38/103)   Écriture des objets:  37% (39/103)   Écriture des objets:  38% (40/103)   Écriture des objets:  39% (41/103)   Écriture des objets:  40% (42/103)   Écriture des objets:  41% (43/103)   Écriture des objets:  42% (44/103)   Écriture des objets:  43% (45/103)   Écriture des objets:  44% (46/103)   Écriture des objets:  45% (47/103)   Écriture des objets:  46% (48/103)   Écriture des objets:  47% (49/103)   Écriture des objets:  48% (50/103)   Écriture des objets:  49% (51/103)   Écriture des objets:  51% (53/103)   Écriture des objets:  52% (54/103)   Écriture des objets:  53% (55/103)   Écriture des objets:  54% (56/103)   Écriture des objets:  55% (57/103)   Écriture des objets:  56% (58/103)   Écriture des objets:  57% (59/103)   Écriture des objets:  58% (60/103)   Écriture des objets:  59% (61/103)   Écriture des objets:  61% (63/103)   Écriture des objets:  62% (64/103)   Écriture des objets:  63% (65/103)   Écriture des objets:  64% (66/103)   Écriture des objets:  65% (67/103)   Écriture des objets:  66% (68/103)   Écriture des objets:  67% (70/103)   Écriture des objets:  68% (71/103)   Écriture des objets:  69% (72/103)   Écriture des objets:  70% (73/103)   Écriture des objets:  71% (74/103)   Écriture des objets:  72% (75/103)   Écriture des objets:  73% (76/103)   Écriture des objets:  74% (77/103)   Écriture des objets:  75% (78/103)   Écriture des objets:  76% (79/103)   Écriture des objets:  77% (80/103)   Écriture des objets:  78% (81/103)   Écriture des objets:  79% (82/103)   Écriture des objets:  80% (83/103)   Écriture des objets:  81% (84/103)   Écriture des objets:  82% (85/103)   Écriture des objets:  83% (86/103)   Écriture des objets:  84% (87/103)   Écriture des objets:  85% (88/103)   Écriture des objets:  86% (89/103)   Écriture des objets:  87% (90/103)   Écriture des objets:  88% (91/103)   Écriture des objets:  89% (92/103)   Écriture des objets:  90% (93/103)   Écriture des objets:  91% (94/103)   Écriture des objets:  92% (95/103)   Écriture des objets:  93% (96/103)   Écriture des objets:  94% (97/103)   Écriture des objets:  95% (98/103)   Écriture des objets:  96% (99/103)   Écriture des objets:  97% (100/103)   Écriture des objets:  98% (101/103)   Écriture des objets:  99% (102/103)   Écriture des objets: 100% (103/103)   Écriture des objets: 100% (103/103), 559.57 KiB | 0 bytes/s, fait.
+Total 103 (delta 13), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/13)   [Kremote: Resolving deltas:   7% (1/13)   [Kremote: Resolving deltas:  15% (2/13)   [Kremote: Resolving deltas:  23% (3/13)   [Kremote: Resolving deltas:  30% (4/13)   [Kremote: Resolving deltas:  53% (7/13)   [Kremote: Resolving deltas:  92% (12/13)   [Kremote: Resolving deltas: 100% (13/13)   [Kremote: Resolving deltas: 100% (13/13), done.[K
+To https://github.com/ColinFay/r-internals.git
+ * [new branch]      master -> master
+La branche master est paramétrée pour suivre la branche distante master depuis origin.
+]0;/home/colin/R/r-internals]0;colin@colin-MacBookPro: ~/R/r-internals[01;32mcolin@colin-MacBookPro[00m:[01;34m~/R/r-internals[00m$ git status
+Sur la branche master
+Votre branche est à jour avec 'origin/master'.
+Modifications qui ne seront pas validées :
+  (utilisez "git add <fichier>..." pour mettre à jour ce qui sera validé)
+  (utilisez "git checkout -- <fichier>..." pour annuler les modifications dans la copie de travail)
+
+	[31mmodifié :         .Rproj.user/B03E3524/console06/24D322D3[m
+
+aucune modification n'a été ajoutée à la validation (utilisez "git add" ou "git commit -a")
+]0;/home/colin/R/r-internals]0;colin@colin-MacBookPro: ~/R/r-internals[01;32mcolin@colin-MacBookPro[00m:[01;34m~/R/r-internals[00m$ [K]0;colin@colin-MacBookPro: ~/R/r-internals[01;32mcolin@colin-MacBookPro[00m:[01;34m~/R/r-internals[00m$ git ass[K[Kdd )A[K[K-A 
