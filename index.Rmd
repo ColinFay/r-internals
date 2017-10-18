@@ -1,6 +1,6 @@
 --- 
 title: "R Internals"
-author: "R Development Core Team"
+author: "R Core Team"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 github-repo: ColinFay/r-internals
